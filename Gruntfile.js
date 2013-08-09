@@ -118,8 +118,12 @@ module.exports = function(grunt) {
     },
     htmlrefs: {
       prod: {
-        src: './_site/**/*.html',
-        dest: './_site/'
+        expand: true,
+        cwd: '_site',
+        src: ['*.html', '*/*.html'],
+        dest: '_site/',
+        flatten: true,
+        filter: 'isFile'      
       }
     }
   });
