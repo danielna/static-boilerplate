@@ -41,3 +41,8 @@ section {
 ul li {
   margin-bottom: 5px;
 }
+
+/* line 31, ../sass/style.sass */
+strong {
+  color: red;
+}
