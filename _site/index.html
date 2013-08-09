@@ -4,7 +4,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-    <title>Site Title</title>
+    <title>Static Site Boilerplate</title>
     <link rel="stylesheet" href="/assets/css/_normalize.css">
     
     <link type="text/css" rel="stylesheet" href="/assets/css/style.min.css">
@@ -26,7 +26,7 @@
         <section class="intro">
             <h2>Introduction</h2>
             <p>A repository I can use as a boilerplate when starting new static projects.</p>
-            <p>Pretty similar to Yeoman, but pared down to personal preferences.</p>
+            <p>Pretty similar to Yeoman, but pared down to fit personal preferences.</p>
             <p>Powered by <a href="http://gruntjs.com" target='_blank'>grunt</a> which has revolutionized my front-end workflow.</p>
         </section>
         
@@ -41,6 +41,7 @@
                 <li>SASS/Compass compilation</li>
                 <li>Production: Minification of CSS/JS, update references in HTML</li>
                 <li>Production: Image optimization</li>
+                <li>All final files are placed in the '_site' directory (after running 'grunt prod'), to be uploaded at your leisure.</li>
             </ul>
         </section>
 
@@ -74,7 +75,22 @@
                 <li>grunt-contrib-connect: "~0.3.0",</li>
                 <li>grunt-contrib-imagemin: "~0.1.4",</li>
                 <li>grunt-usemin: "~0.1.12",</li>
-                <li>grunt-htmlrefs: "~0.4.2"</li>
+                <li>grunt-htmlrefs: "~0.4.2". 
+                    <br/><strong>Note: I made a change to grunt-htmlrefs to make it work the way I wanted it to.  In a nutshell relative destinations between the 'src' and 'dest' specifications were being lost upon parsing the html files.  In other words, _site/about/index.html would get parsed to _site/index.html (or wouldn't be parsed at all), losing the /about/ directory.  You'll want to use my exact version, in node_modules/grunt-html-refs/tasks/grunt-htmlrefs.js.</strong></li>
+            </ul>
+        </section>
+
+        <div class="separator"></div>
+
+        <section class="future-work">
+            <h2>Future Work</h2>
+            <ul>
+                <li>
+                    Integrate file concatenation.
+                </li>
+                <li>
+                    Provide the option to .gzip resources.  Since this needs to be enabled at the server level, make this an option driven through package.json.
+                </li>
             </ul>
         </section>
 
