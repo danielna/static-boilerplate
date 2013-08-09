@@ -36,7 +36,7 @@
             <h2>Supported Features</h2>
             <ul class="list">
                 <li>Modernizr.js for feature detection</li>
-                <li>jQuery (local on dev, Google CDN on production)</li>
+                <li>jQuery 1.10.2 (local on dev, Google CDN on production. Note: starting with jQuery v1.2.x, IE6-IE8 are not supported.)</li>
                 <li>Coffeescript compilation</li>
                 <li>SASS/Compass compilation</li>
                 <li>Production: Minification of CSS/JS, update references in HTML</li>
@@ -50,10 +50,10 @@
             <h2>Commands</h2>
             <ul>
                 <li>
-                    'grunt dev': Spin up a webserver, watch the assets/coffeescript and assets/sass directories for changes and compile accordingly.  Start a local webserver at localhost:9001.
+                    'grunt dev': Watch the assets/coffeescript and assets/sass directories for changes and compile accordingly.  Minification does not occur for debugging purposes.  Start a local webserver at localhost:9001.
                 </li>
                 <li>
-                    'grunt prod': Minify js files, optimize images.  Copy all necessary .html, minified css/js, and optimized assets to _site directory.  Update the references to those assets in the html file.  Start a local webserver at localhost:9001.
+                    'grunt prod': Minify js files, optimize images.  Copy all necessary .html, minified css/js, and optimized assets to _site directory.  Update the references to those assets in each html file.  Start a local webserver at localhost:9001.
                 </li>
             </ul>
         </section>
