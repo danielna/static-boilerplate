@@ -1,1 +1,2 @@
-console.log("Coffeescript for the about page!")
+coffeeMsg = document.getElementById('coffee-msg')
+coffeeMsg.innerHTML = 'This text is being set from assets/coffeescript/about.coffee'

@@ -46,3 +46,13 @@ ul li {
 strong {
   color: red;
 }
+
+/* line 33, ../sass/style.sass */
+a {
+  text-decoration: none;
+  color: #0088cc;
+}
+/* line 36, ../sass/style.sass */
+a:hover {
+  text-decoration: underline;
+}

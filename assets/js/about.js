@@ -1,4 +1,8 @@
 (function() {
-  console.log("Coffeescript for the about page!");
+  var coffeeMsg;
+
+  coffeeMsg = document.getElementById('coffee-msg');
+
+  coffeeMsg.innerHTML = 'This text is being set from assets/coffeescript/about.coffee';
 
 }).call(this);
